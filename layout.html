@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatbot</title>
+  </head>
+  <body>
+    <h1>Welcome to Chatbot</h1>
+    <div id="chat">
+      <textarea id="userInput" placeholder="Type your message..."></textarea>
+      <button onclick="sendMessage()">Send</button>
+    </div>
+    <div id="chatResponse"></div>
+
+    <script>
+      function sendMessage() {
+        const userInput = document.getElementById("userInput").value;
+        document.getElementById("chatResponse").innerText =
+          "You said: " + userInput;
+
+        // Here you would normally send the message to your Salesforce API
+      }
+    </script>
+  </body>
+</html>

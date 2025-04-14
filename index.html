@@ -45,9 +45,15 @@
         align-items: center;
       }
 
-      .logo img {
+      .logo-img {
         height: 40px;
-        margin-right: 10px;
+        display: none;
+      }
+      [data-theme="light"] .logo-img.light {
+        display: inline;
+      }
+      [data-theme="dark"] .logo-img.dark {
+        display: inline;
       }
 
       .toggle-theme {
@@ -136,8 +142,8 @@
   <body>
     <header>
       <div class="logo">
-        <img src="ornidex-logo.png" alt="Ornidex Logo" />
-        <span>Ornidex Portal</span>
+        <img class="logo-img light" src="logo-light.jpeg" alt="Ornidex Logo Light" />
+        <img class="logo-img dark" src="logo-dark.png" alt="Ornidex Logo Dark" />
       </div>
       <button class="toggle-theme" onclick="toggleTheme()">🌙</button>
     </header>
@@ -165,7 +171,6 @@
       <img src="astroagentforce-fly.webp" alt="Agentforce Bot" />
     </div>
 
-    <!-- Theme toggle script -->
     <script>
       function toggleTheme() {
         const html = document.documentElement;

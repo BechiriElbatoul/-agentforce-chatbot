@@ -16,7 +16,6 @@
         background: #0f2027;
         color: #fff;
         height: 100vh;
-        margin: 0;
         overflow: hidden;
         display: flex;
         flex-direction: column;
@@ -88,10 +87,17 @@
         color: #dff3f7;
       }
 
-      #robot {
-        width: 150px;
-        margin: 30px auto;
+      .robot-container {
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        width: 180px;
         animation: float 3s ease-in-out infinite;
+        z-index: 2;
+      }
+
+      .robot-container img {
+        width: 100%;
       }
 
       @keyframes float {
@@ -131,8 +137,6 @@
     <main>
       <h1>Technical Support Bot 🛠️</h1>
       <p class="description">Create cases, check status, and get summaries in real time.</p>
-      <img id="robot" src="https://res.cloudinary.com/dyudmjf4r/image/upload/v1713107725/astro-salesforce.png" alt="Salesforce Bot" />
-
       <div class="floating-cards">
         <div class="card">
           <h3>Create a Case</h3>
@@ -148,6 +152,10 @@
         </div>
       </div>
     </main>
+
+    <div class="robot-container">
+      <img src="https://res.cloudinary.com/dyudmjf4r/image/upload/v1713110225/salesforce-agentforce-bot.png" alt="Agentforce Bot" />
+    </div>
 
     <!-- Particles JS Background -->
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>

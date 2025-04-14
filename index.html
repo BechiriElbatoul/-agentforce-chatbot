@@ -3,22 +3,81 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test Front Medespoir</title>
+    <title>Medespoir Chatbot</title>
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
       body {
-        background: white;
-        font-family: sans-serif;
-        text-align: center;
-        margin-top: 100px;
+        background: linear-gradient(135deg, #e0f7fa, #ffffff);
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      h1 {
+        font-size: 3em;
+        color: #007b8f;
+        margin-bottom: 20px;
+        animation: float 2s ease-in-out infinite;
+      }
+
+      p {
+        font-size: 1.2em;
+        color: #444;
+        margin-bottom: 30px;
+        opacity: 0;
+        animation: fadeIn 2s forwards;
+        animation-delay: 1s;
+      }
+
+      .planet {
+        width: 100px;
+        height: 100px;
+        background: radial-gradient(circle, #00bcd4, #007b8f);
+        border-radius: 50%;
+        box-shadow: 0 0 20px rgba(0, 188, 212, 0.5);
+        animation: rotate 10s linear infinite;
+      }
+
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes float {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
       }
     </style>
   </head>
   <body>
-    <h1>Hello Medespoir 🚀</h1>
-    <p>If you see this, the front is working ✅</p>
-    <p>If you see this, the front is working ✅</p>
+    <h1>Welcome to Medespoir 🚀</h1>
+    <p>Your smart assistant for quotes, cases, and care!</p>
+    <div class="planet"></div>
 
-    <!-- Salesforce Scripttt -->
+    <!-- Salesforce Chat Script -->
     <script type="text/javascript">
       function initEmbeddedMessaging() {
         try {

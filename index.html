@@ -3,44 +3,82 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chatbot</title>
+    <title>Welcome to Medespoir Assistant</title>
     <style>
-      /* Example to change the chat widget background color */
-      .embedded-messaging-container {
-        background-color: #f3f4f7; /* Light grey background */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       }
 
-      /* Style the message bubble */
-      .embedded-messaging-message {
-        background-color: #007bff; /* Blue message bubble */
-        color: white;
-        border-radius: 12px;
-        padding: 10px;
+      body {
+        background: linear-gradient(to right, #e0f7fa, #ffffff);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px;
       }
 
-      /* Style the input field */
-      .embedded-messaging-input {
-        background-color: #fff;
-        border-radius: 25px;
-        padding: 10px;
-        border: 2px solid #ddd;
+      header {
+        text-align: center;
+        margin-top: 50px;
       }
 
-      /* Customize button */
-      .embedded-messaging-send-button {
-        background-color: #28a745; /* Green button */
-        color: white;
-        border-radius: 25px;
-        padding: 10px 15px;
+      header h1 {
+        font-size: 2.5em;
+        color: #007b8f;
+        margin-bottom: 10px;
+      }
+
+      header p {
+        font-size: 1.2em;
+        color: #555;
+      }
+
+      main {
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      .hero-image {
+        max-width: 100%;
+        height: auto;
+        margin: 40px auto;
+        border-radius: 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      footer {
+        text-align: center;
+        font-size: 0.9em;
+        color: #aaa;
+        margin-bottom: 10px;
       }
     </style>
   </head>
   <body>
+    <header>
+      <h1>Welcome to the Medespoir Chat Assistant</h1>
+      <p>Your smart assistant for quotes, case tracking, and more!</p>
+    </header>
+
+    <main>
+      <img
+        class="hero-image"
+        src="https://images.unsplash.com/photo-1588776814546-ec7fa4b3c386?fit=crop&w=1000&q=80"
+        alt="Medical assistant illustration"
+      />
+    </main>
+
+    <footer>&copy; 2025 Medespoir. All rights reserved.</footer>
+
+    <!-- Salesforce Agent Script -->
     <script type="text/javascript">
       function initEmbeddedMessaging() {
         try {
-          embeddedservice_bootstrap.settings.language = "en_US"; // For example, enter 'en' or 'en-US'
-
+          embeddedservice_bootstrap.settings.language = "en_US";
           embeddedservice_bootstrap.init(
             "00DGB000003ZC9K",
             "Agent_chat_bot",

@@ -13,16 +13,16 @@
       }
 
       body {
-        background: linear-gradient(135deg, #a18cd1, #fbc2eb);
-        color: #333;
+        background: #0b0d3a;
+        color: #fff;
         min-height: 100vh;
         overflow-x: hidden;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         position: relative;
-        padding: 20px;
+        padding-top: 100px;
       }
 
       #background {
@@ -31,15 +31,38 @@
         left: 0;
         width: 100%;
         height: 100%;
+        background: url('https://images.unsplash.com/photo-1584395630827-860eee694d7b?fit=crop&w=1600&q=80') no-repeat center center/cover;
         z-index: 0;
+      }
+
+      .foreground-mountains {
+        position: absolute;
+        bottom: 100px;
+        left: 0;
+        width: 100%;
+        height: 300px;
+        background: url('https://raw.githubusercontent.com/Ladrenn/assets/main/mountains-hero.svg') no-repeat bottom center/cover;
+        z-index: 1;
+      }
+
+      .foreground-snow {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 150px;
+        background: white;
+        border-top-left-radius: 80% 40px;
+        border-top-right-radius: 80% 40px;
+        z-index: 2;
       }
 
       main {
         position: relative;
-        z-index: 1;
+        z-index: 3;
         text-align: center;
         max-width: 1000px;
-        margin-top: 40px;
+        padding: 0 20px;
       }
 
       h1 {
@@ -54,7 +77,7 @@
         opacity: 0;
         animation: fadeInUp 1s ease-out forwards;
         animation-delay: 1s;
-        color: #444;
+        color: #f0f0f0;
       }
 
       .floating-cards {
@@ -68,15 +91,15 @@
       .card {
         background: white;
         padding: 25px;
-        border-radius: 20px;
-        box-shadow: 0 8px 24px rgba(0, 161, 224, 0.2);
+        border-radius: 25px;
+        box-shadow: 0 8px 24px rgba(0, 161, 224, 0.3);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         width: 260px;
       }
 
       .card:hover {
         transform: translateY(-8px);
-        box-shadow: 0 12px 30px rgba(0, 161, 224, 0.35);
+        box-shadow: 0 12px 30px rgba(0, 161, 224, 0.4);
       }
 
       .card h3 {
@@ -91,17 +114,17 @@
 
       .robot-container {
         position: fixed;
-        bottom: 40px;
-        right: 40px;
-        width: 150px;
+        bottom: 160px;
+        right: 50px;
+        width: 160px;
         animation: float 3s ease-in-out infinite;
-        z-index: 2;
+        z-index: 4;
       }
 
       .robot-container img {
         width: 100%;
         border-radius: 50%;
-        box-shadow: 0 0 25px rgba(0, 161, 224, 0.4);
+        box-shadow: 0 0 25px rgba(0, 161, 224, 0.5);
       }
 
       @keyframes float {
@@ -138,6 +161,9 @@
   </head>
   <body>
     <div id="background"></div>
+    <div class="foreground-mountains"></div>
+    <div class="foreground-snow"></div>
+
     <main>
       <h1>Technical Support Bot 🛠️</h1>
       <p class="description">Create cases, check status, and get summaries in real time.</p>
@@ -166,14 +192,14 @@
     <script>
       tsParticles.load("background", {
         fullScreen: { enable: false },
-        background: { color: "#ffffff00" },
+        background: { color: "#00000000" },
         particles: {
-          number: { value: 50 },
-          color: { value: ["#00A1E0", "#EEF2F7"] },
+          number: { value: 40 },
+          color: { value: ["#00A1E0", "#ffffff"] },
           shape: { type: "circle" },
           opacity: { value: 0.4 },
-          size: { value: 4 },
-          move: { enable: true, speed: 1.5 }
+          size: { value: 3 },
+          move: { enable: true, speed: 1.2 }
         }
       });
     </script>

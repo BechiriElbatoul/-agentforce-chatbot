@@ -23,7 +23,7 @@
 
       body {
         margin: 0;
-        font-family: 'Segoe UI', sans-serif;
+        font-family: "Segoe UI", sans-serif;
         background-color: var(--bg);
         color: var(--text);
         display: flex;
@@ -123,7 +123,8 @@
       }
 
       @keyframes float {
-        0%, 100% {
+        0%,
+        100% {
           transform: translateY(0);
         }
         50% {
@@ -142,11 +143,15 @@
 
     <main>
       <h1>Welcome, This is Tech Support Agent !</h1>
-      <p class="description">Choose an action below to manage your support workflows within Ornidex.</p>
+      <p class="description">
+        Choose an action below to manage your support workflows within Ornidex.
+      </p>
       <div class="cards">
         <div class="card">
           <h3>Create a Case</h3>
-          <p>Log a new support request with detailed context and urgency level.</p>
+          <p>
+            Log a new support request with detailed context and urgency level.
+          </p>
         </div>
         <div class="card">
           <h3>Track Your Case</h3>
@@ -169,7 +174,8 @@
         const current = html.getAttribute("data-theme");
         const next = current === "dark" ? "light" : "dark";
         html.setAttribute("data-theme", next);
-        document.querySelector('.toggle-theme').textContent = next === 'dark' ? '☀️' : '🌙';
+        document.querySelector(".toggle-theme").textContent =
+          next === "dark" ? "☀️" : "🌙";
       }
     </script>
 
@@ -177,14 +183,15 @@
     <script type="text/javascript">
       function initEmbeddedMessaging() {
         try {
-          embeddedservice_bootstrap.settings.language = "en_US";
+          embeddedservice_bootstrap.settings.language = "en_US"; // For example, enter 'en' or 'en-US'
+
           embeddedservice_bootstrap.init(
-            "00DGB000003ZC9K",
-            "Agent_chat_bot",
-            "https://orgfarm-242a3a3b01-dev-ed.develop.my.site.com/ESWAgentchatbot1743699362163",
+            "00DKB0000014Zbv",
+            "Agentforce_Bot",
+            "https://orgfarm-ab64138847-dev-ed.develop.my.site.com/ESWAgentforceBot1745182733598",
             {
               scrt2URL:
-                "https://orgfarm-242a3a3b01-dev-ed.develop.my.salesforce-scrt.com",
+                "https://orgfarm-ab64138847-dev-ed.develop.my.salesforce-scrt.com",
             }
           );
         } catch (err) {
@@ -194,7 +201,7 @@
     </script>
     <script
       type="text/javascript"
-      src="https://orgfarm-242a3a3b01-dev-ed.develop.my.site.com/ESWAgentchatbot1743699362163/assets/js/bootstrap.min.js"
+      src="https://orgfarm-ab64138847-dev-ed.develop.my.site.com/ESWAgentforceBot1745182733598/assets/js/bootstrap.min.js"
       onload="initEmbeddedMessaging()"
     ></script>
   </body>
